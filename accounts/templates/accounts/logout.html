@@ -1,0 +1,21 @@
+<!-- templates/accounts/logout.html -->
+{% extends 'base.html' %}
+
+{% block title %}Logged Out{% endblock %}
+
+{% block page_title %}Logged Out Successfully{% endblock %}
+
+{% block page_subtitle %}You have been logged out of your account{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <div class="success-message">
+        <p>You have been successfully logged out.</p>
+    </div>
+    
+    <div class="auth-actions">
+        <a href="{% url 'login' %}" class="btn">Login Again</a>
+        <a href="{% url 'signup' %}" class="auth-link mt-20">Create New Account</a>
+    </div>
+</div>
+{% endblock %}

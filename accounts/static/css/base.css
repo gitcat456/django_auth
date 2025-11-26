@@ -194,3 +194,158 @@ input[type="email"]:focus {
 .hidden {
     display: none;
 }
+
+/* Profile Specific Styles */
+.profile-container {
+    width: 100%;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.avatar-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.profile-info h2 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.profile-email {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.profile-join-date {
+    color: #888;
+    font-size: 14px;
+}
+
+.profile-details {
+    margin-bottom: 30px;
+}
+
+.detail-group {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.detail-group label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.detail-value {
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+}
+
+.text-muted {
+    color: #888 !important;
+    font-style: italic;
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-active {
+    background: #e7f7ef;
+    color: #27ae60;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.btn-secondary {
+    background: #95a5a6;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+.btn-secondary:hover {
+    background: #7f8c8d;
+}
+
+/* Profile Edit Styles */
+.profile-edit-container {
+    width: 100%;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.field-errors {
+    margin-top: 5px;
+}
+
+.field-errors .error {
+    color: #e74c3c;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .avatar-circle {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .profile-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+}
