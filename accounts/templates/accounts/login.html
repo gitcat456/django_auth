@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block page_title %}Welcome Back{% endblock %}
+
+{% block page_subtitle %}Sign in to your account{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    
+    {% if form.non_field_errors %}
+        <div class="errorlist">
+            {% for error in form.non_field_errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+    {% endif %}
+    
+    <div class="form-group">
+        <label for="id_username">Username</label>
+        {{ form.username }}
+    </div>
+    
+    <div class="form-group">
+        <label for="id_password">Password</label>
+        {{ form.password }}
+    </div>
+    
+    <button type="submit" class="btn">Sign In</button>
+</form>
+{% endblock %}
+
+{% block footer %}
+<p>Don't have an account? <a href="{% url 'signup' %}" class="auth-link">Sign up here</a></p>
+{% endblock %}

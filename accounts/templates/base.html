@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Authentication{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                {% block header %}
+                <h1>{% block page_title %}Authentication{% endblock %}</h1>
+                <p>{% block page_subtitle %}Welcome{% endblock %}</p>
+                {% endblock %}
+            </div>
+            
+            <div class="auth-content">
+                {% block content %}
+                {% endblock %}
+            </div>
+            
+            <div class="auth-footer">
+                {% block footer %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
